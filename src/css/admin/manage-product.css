@@ -1,0 +1,39 @@
+.manage-table-container .status-available {
+	background-color: var(--status-light-green);
+	color: var(--status-dark-green);
+}
+
+.manage-table-container .status-available::before {
+	content: "Available";
+}
+
+.manage-table-container .status-partially-available {
+	background-color: var(--status-light-orange);
+	color: var(--status-dark-orange);
+}
+
+.manage-table-container .status-partially-available::before {
+	content: "Partially Available";
+}
+
+.manage-table-container .status-limited {
+    background-color: var(--status-light-yellow);
+	color: var(--status-dark-yellow);
+}
+
+.manage-table-container .status-limited::before {
+	content: "Limited";
+}
+
+.manage-table-container .status-unavailable {
+	background-color: var(--status-light-red);
+	color: var(--status-dark-red);
+}
+
+.manage-table-container .status-unavailable::before {
+	content: "Unavailable";
+}
+
+#filter-category-select {
+	width: 430px;
+}

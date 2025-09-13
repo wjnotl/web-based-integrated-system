@@ -1,0 +1,18 @@
+#home-container {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 24px;
+}
+
+.admin-home-container {
+    margin: 0;
+    flex: 1;
+    width: max-content;
+    overflow: visible;
+    height: auto;
+}
+
+.admin-home-container .title {
+    text-align: center;
+}

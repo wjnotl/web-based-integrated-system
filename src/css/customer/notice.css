@@ -1,0 +1,143 @@
+.notice-container {
+	width: 850px;
+	padding: 34px;
+}
+
+.notice-container .title {
+	font-size: 20px;
+	font-weight: normal;
+	margin-bottom: 3px;
+}
+
+.notice-container .date {
+	font-size: 12px;
+	color: var(--dark-gray);
+	margin-bottom: 10px;
+}
+
+.notice-container .content {
+	font-size: 15px;
+	color: var(--black);
+	text-align: justify;
+}
+
+.notice-container .link {
+	margin-top: 20px;
+	margin-bottom: 20px;
+}
+
+.notice-container .image {
+	margin-top: 15px;
+	width: 500px;
+	height: 500px;
+	object-fit: contain;
+	border-radius: 15px;
+}
+
+.poll-container {
+	display: flex;
+	flex-direction: column;
+	gap: 15px;
+    margin-top: 20px;
+}
+
+.poll-container .poll-option {
+	display: flex;
+	align-items: center;
+}
+
+.poll-container .poll-option input {
+	display: none;
+}
+
+.poll-container .poll-option .poll-input-button {
+	width: 13px;
+	height: 13px;
+	border-radius: 50%;
+	border: solid 1px var(--dark-gray);
+	margin-right: 15px;
+}
+
+.poll-container .poll-option input:checked ~ .poll-input-button {
+	background-color: var(--dark-green);
+	background-image: url("/src/img/icon/check.png");
+	background-size: 100%;
+	background-repeat: no-repeat;
+	background-position: center;
+	border-color: var(--dark-green);
+}
+
+.poll-container .poll-option .poll-input-box {
+	flex: 1;
+	border-radius: 5px;
+	font-size: 15px;
+	color: var(--black);
+	border: solid 1px var(--dark-gray);
+	position: relative;
+	overflow: hidden;
+}
+
+.poll-container .poll-option input:checked ~ .poll-input-box {
+	border-color: var(--dark-green);
+    color: var(--dark-green);
+}
+
+.poll-container:has(input:checked) .poll-input-box {
+    border-color: #e5e5e5;
+}
+
+.poll-container .poll-text-container {
+	margin: 8px 0;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	width: 100%;
+}
+
+.poll-container .poll-text-container .poll-text {
+	margin: 0 8px;
+	overflow-wrap: anywhere;
+	white-space: normal;
+	z-index: 1;
+}
+
+.poll-container .poll-text-container .poll-result-value {
+	margin-right: 8px;
+	z-index: 1;
+    display: none;
+}
+
+.poll-container:has(input:checked) .poll-result-value {
+    display: block;
+}
+
+.poll-container .poll-result-percentage {
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: 100%;
+	width: 0%;
+	background-color: #e5e5e5;
+    display: none;
+}
+
+.poll-container:has(input:checked) .poll-result-percentage {
+    display: block;
+}
+
+.poll-container .poll-option input:checked ~ .poll-input-box .poll-result-percentage {
+	background-color: #d4f7b2;
+}
+
+#no-notice,
+#loading-notice {
+	color: var(--dark-gray);
+}
+
+#loading-notice {
+	text-align: center;
+}
+
+main:has(.notice-container) #no-notice {
+	display: none;
+}

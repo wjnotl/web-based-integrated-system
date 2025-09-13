@@ -1,0 +1,18 @@
+.voucher-container {
+	width: 920px;
+	padding: 30px;
+}
+
+#voucher-list-container {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 40px;
+}
+
+#voucher-empty {
+	color: var(--dark-gray);
+}
+
+#voucher-list-container:has(.voucher) #voucher-empty {
+	display: none;
+}

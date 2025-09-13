@@ -1,0 +1,71 @@
+#account-container {
+	width: 800px;
+}
+
+.profile-container {
+	display: flex;
+	gap: 48px;
+}
+
+#change-email-button {
+	width: 20px;
+	height: 20px;
+	background-image: url(/src/img/icon/edit.png);
+	background-size: contain;
+	background-position: center;
+	background-repeat: no-repeat;
+	cursor: pointer;
+	transition: filter 0.3s ease;
+}
+#change-email-button:hover {
+	filter: brightness(2);
+}
+
+#change-email-button.pending {
+	pointer-events: none !important;
+	background-image: url(/src/img/icon/pending.png) !important;
+}
+
+#profile-info {
+	flex: 1;
+}
+
+#profile-picture {
+	flex: 0.5;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+}
+
+#profile-preview-container {
+	position: relative;
+	width: 250px;
+	height: 250px;
+	border-radius: 50%;
+	overflow: hidden;
+	transform: scale(0.8);
+}
+
+#profile-preview {
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%, -50%);
+}
+
+#profile-preview.horizontal-fit {
+	height: 100%;
+	object-fit: contain;
+}
+
+#profile-preview.vertical-fit {
+	width: 100%;
+	object-fit: cover;
+}
+
+#profile-picture-file,
+#remove-picture-checkbox,
+#change-picture-checkbox {
+	display: none;
+}

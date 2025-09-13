@@ -1,0 +1,19 @@
+#filter-notice-container {
+    display: flex;
+    gap: 30px;
+}
+
+#filter-notice-checkbox-container {
+    gap: 30px;
+}
+
+input[type="checkbox"] {
+	width: 17px;
+	height: 17px;
+	margin: 0;
+	padding: 0;
+}
+
+.content-type {
+    white-space: nowrap;
+}

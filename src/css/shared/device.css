@@ -1,0 +1,78 @@
+#device-container {
+	width: 800px;
+}
+
+.device-container {
+	margin-bottom: 14px;
+}
+
+.device-title {
+	font-size: 14px;
+	text-transform: uppercase;
+	color: var(--label-gray);
+	margin-bottom: 8px;
+}
+
+.device-group {
+	display: flex;
+	align-items: center;
+	background-color: rgba(0, 0, 0, 0.05);
+	margin-bottom: 10px;
+}
+
+.device-image {
+	width: 60px;
+	height: 60px;
+	background-size: 60%;
+	background-position: center;
+	background-repeat: no-repeat;
+}
+.device-image.computer {
+	background-image: url(/src/img/icon/computer.png);
+}
+.device-image.phone {
+	background-image: url(/src/img/icon/phone.png);
+}
+.device-image.tablet {
+	background-image: url(/src/img/icon/tablet.png);
+}
+
+.device-info {
+	flex: 1;
+}
+
+.device-name {
+	font-size: 14px;
+	text-transform: uppercase;
+	color: var(--black);
+}
+
+.device-detail {
+	font-size: 14px;
+	color: var(--label-gray);
+}
+
+.device-remove {
+	width: 25px;
+	height: 25px;
+	background-image: url(/src/img/icon/cross.png);
+	background-size: contain;
+	background-position: center;
+	background-repeat: no-repeat;
+	margin-right: 10px;
+	cursor: pointer;
+}
+
+.device-remove:hover {
+	filter: brightness(4);
+}
+
+#no-device {
+	color: var(--dark-gray);
+	font-size: 14px;
+}
+
+.device-container:has(.device-group) #no-device,
+.device-container:not(:has(.device-group)) #logout-all-devices {
+	display: none;
+}

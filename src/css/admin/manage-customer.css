@@ -1,0 +1,35 @@
+.manage-table-container .status-verified {
+	background-color: var(--status-light-green);
+	color: var(--status-dark-green);
+}
+
+.manage-table-container .status-verified::before {
+	content: "Verified";
+}
+
+.manage-table-container .status-unverified {
+	background-color: var(--status-light-yellow);
+	color: var(--status-dark-yellow);
+}
+
+.manage-table-container .status-unverified::before {
+	content: "Unverified";
+}
+
+.manage-table-container .status-banned {
+	background-color: var(--status-light-red);
+	color: var(--status-dark-red);
+}
+
+.manage-table-container .status-banned::before {
+	content: "Banned";
+}
+
+.manage-table-container .status-to_delete {
+	background-color: var(--status-light-orange);
+	color: var(--status-dark-orange);
+}
+
+.manage-table-container .status-to_delete::before {
+	content: "To Delete";
+}

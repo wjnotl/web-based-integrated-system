@@ -1,0 +1,7 @@
+td .button-group-inline {
+    justify-content: end;
+}
+
+td .button-group-inline button {
+    white-space: nowrap;
+}

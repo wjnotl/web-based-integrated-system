@@ -1,0 +1,39 @@
+#search-type-select {
+	width: 300px;
+}
+
+.manage-table-container .status-delivered {
+	background-color: var(--status-light-green);
+	color: var(--status-dark-green);
+}
+
+.manage-table-container .status-delivered::before {
+	content: "Delivered";
+}
+
+.manage-table-container .status-canceled {
+	background-color: var(--status-light-red);
+	color: var(--status-dark-red);
+}
+
+.manage-table-container .status-canceled::before {
+	content: "Canceled";
+}
+
+.manage-table-container .status-preparing {
+	background-color: var(--status-light-yellow);
+	color: var(--status-dark-yellow);
+}
+
+.manage-table-container .status-preparing::before {
+	content: "Preparing";
+}
+
+.manage-table-container .status-in-transit {
+	background-color: var(--status-light-blue);
+	color: var(--status-dark-blue);
+}
+
+.manage-table-container .status-in-transit::before {
+	content: "In Transit";
+}

@@ -1,0 +1,46 @@
+.payment-container {
+	overflow: visible;
+	width: 550px;
+}
+
+.payment-container .title {
+	font-size: 20px;
+	font-weight: normal;
+}
+
+.custom-radio-image.wallet {
+	background-image: url(/src/img/icon/wallet.png);
+}
+.custom-radio-container label:has(input[type="radio"]:checked) .custom-radio-image.wallet {
+	background-image: url(/src/img/icon/wallet_selected.png);
+}
+.custom-radio-image.card {
+	background-image: url(/src/img/icon/card.png);
+}
+.custom-radio-container label:has(input[type="radio"]:checked) .custom-radio-image.card {
+	background-image: url(/src/img/icon/card_selected.png);
+}
+
+#credit-card-container,
+#wallet-container {
+	display: none;
+}
+
+.payment-container:has(input[type="radio"][value="Wallet"]:checked) #wallet-container {
+	display: block;
+}
+
+.payment-container:has(input[type="radio"][value="Card"]:checked) #credit-card-container {
+	display: block;
+}
+
+#summary-total-container > *:nth-child(2)::before {
+	content: "RM ";
+}
+
+#summary-total-container {
+	margin-top: 20px;
+	font-size: 18px;
+	font-weight: bold;
+	color: var(--dark-gray);
+}

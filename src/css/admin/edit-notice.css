@@ -1,0 +1,121 @@
+.form-group:has(textarea),
+.form-group:has(img) {
+	align-self: center;
+}
+
+.form-group:has(img[src=""]) {
+	align-self: auto;
+}
+
+.form-group #picture-wrapper:has(img[src=""]) {
+	display: none;
+}
+
+.form-group .button-group {
+	margin-top: 10px;
+}
+
+#picture-wrapper {
+	display: inline-block;
+	overflow: hidden;
+	width: 250px;
+	height: 250px;
+}
+
+#picture-preview-container {
+	position: relative;
+	width: 500px;
+	height: 500px;
+	overflow: hidden;
+	transform: scale(0.5);
+	transform-origin: top left;
+}
+
+#picture-preview {
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%, -50%);
+}
+
+#picture-preview.horizontal-fit {
+	height: 100%;
+	object-fit: contain;
+}
+
+#picture-preview.vertical-fit {
+	width: 100%;
+	object-fit: cover;
+}
+
+#picture-file,
+#change-picture-checkbox,
+#remove-picture-checkbox {
+	display: none;
+}
+
+.upload-overlay .upload-drop-zone {
+	width: calc(500px - 32px - 32px);
+	height: calc(500px - 32px - 32px);
+}
+
+.upload-overlay .upload-preview-container {
+	width: 500px;
+	height: 500px;
+}
+
+.poll-container {
+	display: flex;
+	flex-direction: column;
+	gap: 15px;
+    margin-bottom: 15px;
+}
+
+.poll-container .poll-option {
+	display: flex;
+	align-items: center;
+    gap: 8px;
+}
+
+.poll-container .poll-option .poll-input-box {
+	flex: 1;
+	border-radius: 5px;
+	font-size: 15px;
+	color: var(--black);
+	border: solid 1px var(--dark-gray);
+	position: relative;
+	overflow: hidden;
+}
+
+.poll-container .poll-text-container {
+	margin: 8px 0;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	width: 100%;
+}
+
+.poll-container .poll-text-container .poll-text {
+	margin: 0 8px;
+	overflow-wrap: anywhere;
+	white-space: normal;
+	z-index: 1;
+}
+
+.poll-container .poll-text-container .poll-result-value {
+	margin-right: 8px;
+	z-index: 1;
+}
+
+.poll-container .poll-result-percentage {
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: 100%;
+	width: 0%;
+	background-color: #e5e5e5;
+}
+
+#add-option-button {
+    white-space: nowrap;
+}

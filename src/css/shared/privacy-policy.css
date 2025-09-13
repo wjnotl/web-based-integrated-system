@@ -1,0 +1,32 @@
+.privacy-container {
+	width: calc(100% - 24px - 24px);
+	color: var(--dark-gray);
+}
+
+.privacy-container .title {
+	text-align: center;
+	font-size: 30px;
+}
+
+.privacy-container h3 {
+	color: var(--black);
+	margin: 0;
+	margin-bottom: 6px;
+}
+
+.privacy-container p {
+	margin: 0;
+	margin-bottom: 30px;
+}
+
+.privacy-container ul {
+	margin-left: 20px;
+	margin-right: 0;
+	margin-top: 5px;
+	margin-bottom: 30px;
+}
+
+.privacy-container ul li {
+	margin: 0;
+	margin-bottom: 5px;
+}

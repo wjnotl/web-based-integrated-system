@@ -1,0 +1,50 @@
+.sales-container {
+	width: calc(100% - 24px - 24px);
+}
+
+.sales-container .title {
+	text-align: center;
+}
+
+.sales-container table {
+	width: 100%;
+	border-collapse: separate;
+	border-spacing: 0;
+	outline: 1px solid var(--divider-gray);
+	margin-top: 20px;
+}
+
+.sales-container th,
+.sales-container td {
+	padding: 10px;
+	text-align: left;
+}
+
+.sales-container th {
+	background-color: var(--light-green);
+	color: var(--white);
+	font-weight: normal;
+	white-space: nowrap;
+	padding-right: 30px;
+}
+
+.sales-container tr td {
+	border-bottom: 1px solid var(--divider-gray);
+	color: var(--black);
+}
+
+.sales-container tr:last-child td {
+	border-bottom: none;
+}
+
+.sales-container th:first-child {
+	width: 1%;
+}
+
+.sales-container:has(input[type="radio"][value="annually"]:checked) .quarterly-table {
+	display: none;
+}
+
+.sales-container:has(input[type="radio"][value="quarterly"]:checked) .annually-table {
+	display: none;
+}

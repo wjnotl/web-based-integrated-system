@@ -1,0 +1,108 @@
+.checkout-container {
+	overflow: visible;
+	width: 550px;
+}
+
+.checkout-container .title {
+	font-size: 20px;
+	font-weight: normal;
+}
+
+.custom-radio-image.standard {
+	background-image: url(/src/img/icon/lorry.png);
+}
+.custom-radio-container label:has(input[type="radio"]:checked) .custom-radio-image.standard {
+	background-image: url(/src/img/icon/lorry_selected.png);
+}
+.custom-radio-image.express {
+	background-image: url(/src/img/icon/rocket.png);
+}
+.custom-radio-container label:has(input[type="radio"]:checked) .custom-radio-image.express {
+	background-image: url(/src/img/icon/rocket_selected.png);
+}
+
+.checkout-container .divider-horizontal {
+	margin-bottom: 24px;
+}
+
+#voucher-select-container:has(.voucher) {
+	margin-bottom: 20px;
+}
+
+#select-voucher-button::before {
+	content: "Select";
+}
+
+#voucher-select-container:has(.voucher) ~ .input-group #select-voucher-button::before {
+	content: "Change";
+}
+
+#remove-voucher-button {
+	display: none;
+}
+
+#voucher-select-container:has(.voucher) ~ .input-group #remove-voucher-button {
+	display: inline;
+}
+
+#summary-subtotal-container {
+	margin: 20px 0;
+	font-size: 15px;
+	color: var(--dark-gray);
+}
+
+#summary-subtotal-container > *:nth-child(2n + 2)::before,
+#summary-total-container > *:nth-child(2)::before {
+	content: "RM ";
+}
+
+#summary-subtotal-container > .negative::before {
+	content: "-RM ";
+}
+
+#summary-total-container {
+	margin-top: 20px;
+	font-size: 18px;
+	font-weight: bold;
+	color: var(--dark-gray);
+}
+
+#voucher-overlay > .content {
+	width: 1000px;
+	padding: 0;
+}
+
+#voucher-overlay .overlay-header {
+	padding: 0 32px;
+	padding-top: 32px;
+	margin: 0;
+}
+
+#voucher-overlay-list-container {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 40px;
+	max-height: calc(100vh - 96px - 140px - 140px);
+	overflow: auto;
+	padding: 32px;
+	padding-top: 24px;
+}
+
+#voucher-overlay-list-container > .voucher {
+	transition: all 0.3s ease;
+	cursor: pointer;
+}
+
+#voucher-overlay-list-container > .voucher:hover {
+	filter: brightness(0.8) drop-shadow(0 3px 4px rgba(0, 0, 0, 0.5));
+}
+
+#voucher-empty {
+	color: var(--dark-gray);
+	padding: 32px;
+	padding-top: 24px;
+}
+
+#voucher-overlay:has(.voucher) #voucher-empty {
+	display: none;
+}

@@ -1,0 +1,124 @@
+#search-form {
+	display: flex;
+	width: 100%;
+	height: 100%;
+	gap: 30px;
+}
+
+#search-form-left-container {
+	width: calc(100% - 957.92px - 30px);
+}
+
+#search-form-left-container .filter-container {
+	padding: 20px 0;
+}
+
+.filter-container .title {
+	font-size: 15px;
+	color: var(--black);
+	margin-bottom: 10px;
+}
+
+.filter-container .content {
+	font-size: 14px;
+	color: var(--dark-gray);
+}
+
+.filter-container .content > div {
+	display: flex;
+	align-items: center;
+	padding-bottom: 10px;
+}
+
+.filter-container label {
+	flex: 1;
+	display: flex;
+	align-items: center;
+}
+
+.filter-container input[type="checkbox"],
+.filter-container input[type="radio"] {
+	margin: 0;
+	margin-right: 9px;
+}
+
+.filter-container .form-group {
+	gap: 10px;
+	color: var(--dark-gray);
+	margin: 0;
+}
+
+.filter-container .form-group .form-input input {
+	background-color: var(--pure-white);
+	font-size: 14px;
+	padding: 5px;
+}
+
+.filter_rating_number {
+	width: 12px;
+}
+
+.filter_rating_star {
+	width: 17px;
+	height: 17px;
+	background-image: url(/src/img/icon/star.png);
+	background-size: 80%;
+	background-position: center;
+	background-repeat: no-repeat;
+	margin-right: 2px;
+}
+
+#search-form-right-container {
+	width: 957.92px;
+}
+
+#search-form-top-container {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+
+#search-result {
+	display: flex;
+	align-items: center;
+	color: var(--black);
+}
+
+#search-result-icon {
+	display: inline-block;
+	width: 20px;
+	height: 20px;
+	background-image: url(/src/img/icon/info.png);
+	background-size: contain;
+	background-position: center;
+	background-repeat: no-repeat;
+	margin-right: 8px;
+	margin-top: -3px;
+}
+
+#sort-result-container {
+	color: var(--black);
+}
+
+#sort-result-select {
+	margin-left: 10px;
+}
+
+#search-form-bottom-container {
+	padding: 0;
+	padding-top: 24px;
+}
+
+#no-search {
+	color: var(--dark-gray);
+}
+
+#search-form:has(.product-container) #no-search,
+#search-form:not(:has(.product-container)) #search-form-page-container {
+	display: none;
+}
+
+#search-form:not(:has(#category-filter-container .content > div)) #category-filter-container,
+#search-form:not(:has(#category-filter-container .content > div)) #category-filter-divider {
+	display: none;
+}

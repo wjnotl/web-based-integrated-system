@@ -1,0 +1,29 @@
+.contact-us-container {
+    color: var(--dark-gray);
+    width: max-content;
+}
+
+.contact-us-container .title {
+	text-align: center;
+	font-size: 30px;
+    margin: 0;
+    margin-bottom: 10px;
+}
+
+.contact-us-container p {
+    line-height: 1.5;
+    margin: 0;
+    margin-bottom: 30px;
+}
+
+.contact-us-container .content {
+	display: flex;
+	align-items: center;
+	gap: 10px;
+    margin-bottom: 20px;
+}
+
+.contact-us-container .content img {
+	width: 30px;
+	height: 30px;
+}

@@ -1,0 +1,244 @@
+#cart-form {
+	display: flex;
+	width: 100%;
+	height: 100%;
+	gap: 30px;
+}
+
+#cart-form-left-container {
+	flex: 0.6;
+}
+
+#cart-form-right-container {
+	flex: 0.4;
+}
+
+.cart-container {
+	padding: 20px;
+	width: calc(100% - 40px);
+	margin: 0;
+	display: flex;
+	justify-content: space-between;
+}
+
+#select-all-container {
+	display: flex;
+	align-items: flex-end;
+	font-size: 15px;
+	line-height: 1;
+	color: var(--black);
+}
+
+#cart-empty {
+	color: var(--dark-gray);
+}
+
+#cart-form:has(.cart-items-container) #cart-empty,
+#cart-form:not(:has(.cart-items-container)) #select-all-container,
+#cart-form:not(:has(.cart-items-container)) #bulk-remove-button,
+#cart-form:not(:has(.cart-items-container)) #cart-summary-container {
+	display: none;
+}
+
+#cart-form:not(:has(.cart-items-container)) #cart-form-left-container {
+	flex: 1;
+}
+
+#cart-form:not(:has(.cart-items-container)) #cart-form-right-container {
+	flex: 0;
+}
+
+#select-all-container label {
+	padding-left: 10px;
+}
+
+input[type="checkbox"] {
+	width: 17px;
+	height: 17px;
+	margin: 0;
+	padding: 0;
+}
+
+.cart-remove-button {
+	width: 25px;
+	height: 25px;
+	background-image: url(/src/img/icon/delete.png);
+	background-size: 100%;
+	background-position: center;
+	background-repeat: no-repeat;
+	cursor: pointer;
+	transition: all 0.3s ease;
+}
+.cart-remove-button:hover {
+	background-image: url(/src/img/icon/delete_red.png);
+}
+
+.cart-favourite-button {
+	width: 25px;
+	height: 25px;
+	background-image: url(/src/img/icon/favourite_border.png);
+	background-size: contain;
+	background-position: center;
+	background-repeat: no-repeat;
+	cursor: pointer;
+	transition: all 0.3s ease;
+}
+.cart-favourite-button.favourite {
+	background-image: url(/src/img/icon/favourite.png);
+}
+.cart-favourite-button:hover {
+	filter: brightness(0.8);
+}
+
+.cart-items-container {
+	margin-top: 15px;
+}
+
+.cart-items-container .left {
+	display: flex;
+	align-items: center;
+}
+
+.product-image {
+	width: 100px;
+	height: 100px;
+	object-fit: cover;
+	margin: 0 15px;
+}
+
+.product-details {
+	font-size: 15px;
+	display: flex;
+	flex-direction: column;
+	height: 100%;
+	width: 450px;
+}
+
+.product-name-container {
+	flex: 1;
+}
+
+.product-name {
+	color: var(--black) !important;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+
+.product-variation {
+	color: var(--dark-gray);
+}
+
+.product-colour::before {
+	content: "Colour: ";
+}
+
+.product-size::before {
+	content: "Size: ";
+}
+
+.product-details-bottom {
+	display: flex;
+	align-items: end;
+	justify-content: space-between;
+}
+
+.product-details-bottom .form-group {
+	margin-bottom: 0;
+}
+
+.product-price {
+	font-size: 25px;
+	color: var(--light-green);
+}
+.product-price::before {
+	content: "RM ";
+	font-size: 15px;
+}
+
+.cart-items-container .right {
+	display: flex;
+	flex-direction: column;
+	align-items: end;
+	justify-content: space-between;
+	margin-left: 10px;
+}
+
+.cart-items-container .right .cart-buttons-container {
+	display: flex;
+	gap: 5px;
+}
+
+.cart-items-container .right .form-group {
+	margin-bottom: 0;
+}
+
+.cart-items-container .right .form-group .form-input {
+	width: 100%;
+}
+
+.cart-items-container .right .form-group .form-input input {
+	text-align: center;
+	font-size: 14px;
+}
+
+#cart-summary-container {
+	flex-direction: column;
+}
+
+#cart-summary-container .title {
+	margin-bottom: 10px;
+}
+
+#no-cart-summary-items {
+	color: var(--dark-gray);
+	font-size: 14px;
+}
+
+#cart-summary-container:has(#cart-summary-items-container > *) #no-cart-summary-items {
+	display: none;
+}
+
+
+#cart-summary-items-container {
+	display: grid;
+	grid-template-columns: 150px max-content max-content max-content auto;
+	row-gap: 3px;
+	column-gap: 10px;
+	color: var(--dark-gray);
+	font-size: 14px;
+	margin-bottom: 20px;
+}
+
+#cart-summary-items-container > .error {
+	color: var(--error-dark-red);
+}
+
+#cart-summary-items-container > *:nth-child(5n + 1) {
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+
+#cart-summary-items-container > *:nth-child(5n + 4)::before {
+	content: "x ";
+}
+
+#cart-summary-items-container > *:nth-child(5n + 5) {
+	text-align: right;
+}
+
+#cart-summary-items-container > *:nth-child(5n + 5)::before {
+	content: "RM ";
+}
+
+#cart-total-container {
+	margin: 20px 0;
+	font-size: 18px;
+	font-weight: bold;
+	color: var(--dark-gray);
+}
+
+#cart-total-container > *:nth-child(2)::before {
+	content: "RM ";
+}

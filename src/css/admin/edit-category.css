@@ -1,0 +1,45 @@
+.form-group:has(img) {
+	align-self: center;
+}
+
+.form-group .button-group {
+	margin-top: 10px;
+}
+
+#picture-wrapper {
+	display: inline-block;
+	overflow: hidden;
+	width: 200px;
+	height: 200px;
+}
+
+#picture-preview-container {
+	position: relative;
+	width: 250px;
+	height: 250px;
+	overflow: hidden;
+	transform: scale(0.8);
+	transform-origin: top left;
+}
+
+#picture-preview {
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%, -50%);
+}
+
+#picture-preview.horizontal-fit {
+	height: 100%;
+	object-fit: contain;
+}
+
+#picture-preview.vertical-fit {
+	width: 100%;
+	object-fit: cover;
+}
+
+#picture-file,
+#change-picture-checkbox {
+	display: none;
+}

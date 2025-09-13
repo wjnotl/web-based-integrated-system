@@ -1,0 +1,44 @@
+#favourite-container {
+	width: 100%;
+	padding: 24px 0;
+}
+
+#favourite-container .title {
+	margin: 0;
+	padding: 0 24px;
+}
+
+.buttons-container {
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.remove-button {
+	width: 24px;
+	height: 24px;
+	background-size: 80%;
+	background-position: center;
+	background-repeat: no-repeat;
+	cursor: pointer;
+	transition: all 0.3s ease;
+}
+
+.remove-button {
+	background-image: url(/src/img/icon/delete.png);
+}
+
+.remove-button:hover {
+	background-image: url(/src/img/icon/delete_red.png);
+}
+
+#no-favourite {
+    margin-top: 14px;
+    color: var(--dark-gray);
+    padding: 0 24px;
+}
+
+#favourite-container:has(.product-container) #no-favourite {
+    display: none;
+}

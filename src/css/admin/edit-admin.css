@@ -1,0 +1,10 @@
+input[type="checkbox"] {
+	width: 15px;
+	height: 15px;
+    margin: 0;
+}
+
+.form-group:has(input[type="checkbox"]),
+.form-group:has(img) {
+	align-self: center;
+}

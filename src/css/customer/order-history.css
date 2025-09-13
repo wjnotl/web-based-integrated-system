@@ -1,0 +1,120 @@
+.order-history-container {
+	width: 800px;
+}
+	
+.order-history-container .title {
+	font-size: 20px;
+	font-weight: normal;
+	margin: 0;
+}
+
+.order-history-container .title::before {
+	content: "ID: ";
+}
+
+.order-history-container .status {
+	width: 70px;
+	font-size: 14px;
+	text-align: center;
+	padding: 5px 10px;
+	border-radius: 15px;
+}
+
+.order-history-container .status.unpaid {
+	background-color: var(--input-gray);
+	color: var(--dark-gray);
+}
+.order-history-container .status.unpaid::before {
+	content: "Unpaid";
+}
+
+.order-history-container .status.preparing {
+	background-color: var(--status-light-yellow);
+	color: var(--status-dark-yellow);
+}
+.order-history-container .status.preparing::before {
+	content: "Preparing";
+}
+
+.order-history-container .status.in-transit {
+	background-color: var(--status-light-blue);
+	color: var(--status-dark-blue);
+}
+.order-history-container .status.in-transit::before {
+	content: "In Transit";
+}
+
+.order-history-container .status.delivered {
+	background-color: var(--status-light-green);
+	color: var(--status-dark-green);
+}
+.order-history-container .status.delivered::before {
+	content: "Delivered";
+}
+
+.order-history-container .status.canceled {
+	background-color: var(--status-light-red);
+	color: var(--status-dark-red);
+}
+.order-history-container .status.canceled::before {
+	content: "Canceled";
+}
+
+.order-history-container .timestamp {
+	font-size: 14px;
+	color: var(--dark-gray);
+}
+
+.order-history-container .price {
+	font-size: 28px;
+	margin-top: 10px;
+	color: var(--black);
+	text-align: right;
+}
+
+.order-history-container .price::before {
+	content: "RM ";
+	font-size: 18px;
+}
+
+.order-history-container .buttons-container {
+	margin-top: 5px;
+	display: flex;
+	justify-content: space-between;
+}
+
+.order-history-container .buttons-container button {
+	border-radius: 5px;
+}
+
+a[data-button-type="pay"] {
+	border-radius: 5px;
+	display: none;
+}
+
+button[data-button-type="cancel"] {
+	display: none;
+}
+
+.order-history-container:has(.status.preparing) button[data-button-type="cancel"],
+.order-history-container:has(.status.unpaid) button[data-button-type="cancel"] {
+	display: inline;
+}
+
+.order-history-container:has(.status.unpaid) a[data-button-type="pay"] {
+	display: inline;
+}
+
+#no-order,
+#loading-order {
+	color: var(--dark-gray);
+	width: 800px;
+}
+
+#loading-order {
+	text-align: center;
+}
+
+main:has(.order-history-container:not(#filter-order-container)) #no-order {
+	display: none;
+}

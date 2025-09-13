@@ -1,0 +1,88 @@
+.wallet-container {
+	width: 800px;
+}
+
+#wallet-balance-container {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+
+#wallet-balance-container .title {
+	margin: 0;
+	margin-right: 10px;
+}
+
+#current-balance {
+	font-size: 30px;
+}
+
+#current-balance::before {
+	content: "RM ";
+	font-size: 20px;
+}
+
+#filter-transaction-container {
+	margin-bottom: 30px;
+}
+
+#no-transaction,
+#loading-transaction {
+	color: var(--dark-gray);
+}
+
+#loading-transaction {
+	text-align: center;
+}
+
+.wallet-container:has(.transaction-container) #no-transaction {
+	display: none;
+}
+
+.transaction-container {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	margin-bottom: 15px;
+	padding: 10px;
+	border-radius: 5px;
+	border: 1px solid var(--input-gray);
+	text-decoration: none !important;
+	background-color: rgba(0, 0, 0, 0.05);
+	transition: all 0.3s ease;
+}
+
+a.transaction-container:hover {
+	cursor: pointer;
+	background-color: rgba(0, 0, 0, 0.1);
+}
+
+.transaction-container .title {
+	font-size: 15px;
+	color: var(--black);
+	margin: 0;
+}
+
+.transaction-container .timestamp {
+	font-size: 12px;
+	color: var(--dark-gray);
+}
+
+.transaction-container .price {
+	font-size: 25px;
+	color: var(--light-green);
+}
+
+.transaction-container .price.minus {
+	color: var(--error-dark-red);
+}
+
+.transaction-container .price::before {
+	content: "+RM ";
+	font-size: 16px;
+}
+
+.transaction-container .price.minus::before {
+	content: "-RM ";
+	font-size: 16px;
+}

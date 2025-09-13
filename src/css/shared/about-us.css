@@ -1,0 +1,27 @@
+.about-us-container {
+    width: calc(100% - 24px - 24px);
+    color: var(--dark-gray);
+}
+
+.about-us-container .title {
+	text-align: center;
+	font-size: 30px;
+    margin: 0;
+}
+
+.about-us-container .content {
+	display: flex;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.about-us-container .content p {
+    padding: 20px;
+    flex: 1;
+    font-size: 18px;
+}
+
+.about-us-container .content img {
+    padding: 20px;
+    flex: 1;
+}
